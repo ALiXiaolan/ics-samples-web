@@ -2,7 +2,7 @@ const path = require("path");
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
-const pathURL = "http://192.168.75.1:8889";
+const pathURL = "http://127.0.0.1:8889";
 module.exports = {
   baseUrl: "/",
   lintOnSave: true,

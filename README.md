@@ -1,5 +1,10 @@
 # cli3
 
+## Node版本要求
+```
+8.0+
+```
+
 ## Project setup
 ```
 npm install

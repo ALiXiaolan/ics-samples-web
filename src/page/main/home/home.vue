@@ -68,7 +68,7 @@ export default {
             endTime: 1543856950000,
             vin: "LVGEN56A4JG247290"
           }, // 分段轨迹参数
-          soketUrl: "ws://192.168.75.1:8889/api/ws/gpsWebSocket", // 推送地址
+          soketUrl: "ws://127.0.0.1:8889/api/ws/gpsWebSocket", // 推送地址
           vinCode: "LB37752Z3JL587321", // 推送vin码
           iconUrl: "../static/images/driving.png", // 车辆图标
           startIcon: "../static/images/start.png", // 轨迹开始图标
