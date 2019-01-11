@@ -57,8 +57,8 @@ export default {
           zoom: 16, // 初始化地图层级
           trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
           trackParam: { //五分钟拖尾轨迹初始化参数
-            startTime: 1539931550000,
-            endTime: 1539946514000,
+            startTime: 1540038362000,
+            endTime: 1540038605000,
             vin: "LVGEN56A4JG247290"
           },
           iconUrl: "../static/images/driving.png", // 车辆图标
