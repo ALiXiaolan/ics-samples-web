@@ -64,14 +64,6 @@ export default {
           markerSize: [20, 43], // 车辆图标尺寸 原始图片尺寸，不需要偏移量
           startEndSize: [26, 37], // 开始结束图标尺寸
           startEndAnchor: [10, 37], // 开始结束图标偏移量，10是图片宽度的一半，37是图片高度
-          trackControl: {
-            // 轨迹按钮自定义
-            startButton: "开",
-            endButton: "暂停",
-            stopButton: "停止",
-            reduceButton: "减速",
-            addButton: "加速"
-          }
         }
       });
       // 轨迹点击事件  外部扩展
