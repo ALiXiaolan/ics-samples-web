@@ -51,23 +51,11 @@ export default {
       let track = new Maptrack({
         dom: "apiId",
         mapType: "bmap",
-        mapTrack: false, // 是否开启五分钟拖尾轨迹
-        splitTrack: false, // 是否开启分段轨迹
         mapMointer: true, // 是否开启推送
         config: {
           gps: [116.404, 39.915], // 初始化地图经纬度
           zoom: 16, // 初始化地图层级
           trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
-          trackParam: { //五分钟拖尾轨迹初始化参数
-            startTime: 1539108541000,
-            endTime: 1539109463000,
-            vin: "LVGEN56A4JG247290"
-          },
-          splitTrackParam: { //分段轨迹初始化参数
-            startTime: 1543785649000,
-            endTime: 1543856950000,
-            vin: "LVGEN56A4JG247290"
-          }, // 分段轨迹参数
           soketUrl: "ws://127.0.0.1:8889/api/ws/gpsWebSocket", // websocket推送地址
           vinCode: "LB37752Z3JL587321", // websocket推送参数
           iconUrl: "../static/images/driving.png", // 车辆图标
