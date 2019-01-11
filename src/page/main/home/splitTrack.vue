@@ -13,7 +13,7 @@
 </style>
 <template>
   <div style="width:100%;height:100%;">
-      <div id="apiId" style="width: 1000px;height: 600px; top: 100px; left: 900px;">
+      <div id="apiId" style="width: 60%;height: 60%; top: 10%; left: 40%;">
       </div>
       <div id="button">切换地图大小</div>
   </div>
@@ -42,10 +42,10 @@ export default {
               apiId.style.top="0px";
               apiId.style.left="0px";
           }else{
-              apiId.style.width ="1000px";
-              apiId.style.height="600px";
-              apiId.style.top="100px";
-              apiId.style.left="900px";
+              apiId.style.width ="60%";
+              apiId.style.height="60%";
+              apiId.style.top="10%";
+              apiId.style.left="40%";
           }
       };
       let track = new Maptrack({
