@@ -13,7 +13,7 @@ const main = r =>
 
 // login
 const login = r =>
-  require.ensure([], () => r(require("../page/main/home/home")), "home");
+  require.ensure([], () => r(require("../page/main/home/vehicleList")), "vehicleList");
 
 // 首页
 const home = r =>
@@ -26,6 +26,10 @@ const mapTrack = r =>
 //分段轨迹
 const splitTrack = r =>
     require.ensure([], () => r(require("../page/main/home/splitTrack")), "splitTrack");
+
+//分段轨迹
+const vehicleList = r =>
+    require.ensure([], () => r(require("../page/main/home/vehicleList")), "vehicleList");
 
 export default [
   // 未匹配到则404页面
@@ -78,6 +82,11 @@ export default [
                 name: "分段轨迹",
                 path: "splitTrack",
                 component: splitTrack
+            },
+            {
+                name: "车辆列表",
+                path: "vehicleList",
+                component: vehicleList
             }
         ]
       }

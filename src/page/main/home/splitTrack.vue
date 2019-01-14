@@ -10,12 +10,25 @@
   color: white;
   z-index: 999999;
 }
+    #back{
+        position: absolute;
+        right: 8px;
+        top: 30px;
+        cursor: pointer;
+        padding: 10px;
+        background: blue;
+        border-radius: 4px;
+        color: white;
+        z-index: 999999;
+
+    }
 </style>
 <template>
   <div style="width:100%;height:100%;">
       <div id="apiId" style="width: 60%;height: 60%; top: 10%; left: 40%;">
       </div>
       <div id="button">切换地图大小</div>
+      <div id="back">返回</div>
   </div>
 </template>
 <script>
@@ -25,6 +38,10 @@ export default {
   data() {
     return {};
   },
+    created(){
+        this.obj = this.$route.query
+        console.log(this.$route.query)
+    },
   mounted() {
     this.initData();
   },
@@ -57,9 +74,9 @@ export default {
           zoom: 16, // 初始化地图层级
           trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
           splitTrackParam: { //分段轨迹初始化参数
-            startTime: 1541735282000,
-            endTime: 1541779200000,
-            vin: "LB37752Z3JL587321"
+            startTime: this.obj.startTime,
+            endTime: this.obj.endTime,
+            vin: this.obj.vin
           },
           iconUrl: "../static/images/driving.png", // 车辆图标
           startIcon: "../static/images/start.png", // 轨迹开始图标

@@ -25,6 +25,10 @@ export default {
   data() {
     return {};
   },
+    created(){
+        this.obj = this.$route.query
+        console.log(this.$route.query)
+    },
   mounted() {
     this.initData();
   },
@@ -57,9 +61,9 @@ export default {
           zoom: 16, // 初始化地图层级
           trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
           trackParam: { //五分钟拖尾轨迹初始化参数
-            startTime: 1541735282000,
-            endTime: 1541736176000,
-            vin: "LB37752Z3JL587321"
+            startTime: this.obj.startTime,
+            endTime: this.obj.endTime,
+            vin: this.obj.vin
           },
           iconUrl: "../static/images/driving.png", // 车辆图标
           startIcon: "../static/images/start.png", // 轨迹开始图标

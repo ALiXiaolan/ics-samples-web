@@ -23,11 +23,17 @@ import Maptrack from "Maptrack"; //页面使用 需要引入
 export default {
   components: {},
   data() {
-    return {};
+    return {
+        obj: {}
+    };
   },
   mounted() {
     this.initData();
   },
+    created(){
+        this.obj = this.$route.query
+            console.log(this.$route.query)
+    },
   beforeDestroy() {},
   methods: {
     initData() {
@@ -57,7 +63,7 @@ export default {
           zoom: 16, // 初始化地图层级
           trackApi: "/api/sample", // 根据后端访问jar包接口前缀进行配置
           soketUrl: "ws://127.0.0.1:8889/api/ws/gpsWebSocket", // websocket推送地址
-          vinCode: "LB37752Z3JL587321", // websocket推送参数
+          vinCode: this.obj.vin, // websocket推送参数
           iconUrl: "../static/images/driving.png", // 车辆图标
           startIcon: "../static/images/start.png", // 轨迹开始图标
           endIcon: "../static/images/end.png", // 轨迹结束图标
